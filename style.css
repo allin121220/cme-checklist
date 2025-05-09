@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset dasar */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,6 +22,7 @@ body {
 .title {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .header {
@@ -52,19 +53,20 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
+  font-size: 12px; /* Ukuran font lebih kecil */
 }
 
 th, td {
   border: 1px solid #000;
-  padding: 8px;
+  padding: 6px;
   vertical-align: top;
 }
 
 .result, .note {
   border: none;
   width: 100%;
-  padding: 5px;
-  font-size: 14px;
+  padding: 4px;
+  font-size: 12px;
 }
 
 .footer {
@@ -76,11 +78,12 @@ th, td {
 .signature {
   text-align: center;
   width: 45%;
-  margin-bottom: 30px; /* Jarak untuk tanda tangan */
+  margin-bottom: 30px;
 }
 
 .signature p {
   margin-bottom: 10px;
+  font-size: 12px;
 }
 
 .signature input {
@@ -89,6 +92,7 @@ th, td {
   width: 100%;
   text-align: center;
   padding: 5px;
+  font-size: 12px;
 }
 
 .print-button {
@@ -103,12 +107,53 @@ th, td {
   font-size: 16px;
 }
 
-@media (max-width: 600px) {
-  .header {
-    grid-template-columns: 1fr;
+/* CSS untuk mode cetak */
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
   }
+
+  .container {
+    max-width: 100%;
+    padding: 10px;
+    font-size: 10px; /* Ukuran font lebih kecil saat cetak */
+  }
+
+  .header {
+    gap: 10px;
+    font-size: 10px;
+  }
+
+  .input-group {
+    margin-bottom: 5px;
+  }
+
+  .checklist-section {
+    margin-bottom: 15px;
+  }
+
+  table {
+    font-size: 10px;
+    page-break-inside: avoid; /* Hindari tabel terpecah */
+  }
+
+  th, td {
+    padding: 4px;
+  }
+
+  .footer {
+    margin-top: 30px;
+    font-size: 10px;
+  }
+
   .print-button {
-    width: 90%;
-    margin: 20px 5%;
+    display: none; /* Sembunyikan tombol saat cetak */
+  }
+
+  /* Pastikan konten muat dalam 1 halaman */
+  @page {
+    size: A4;
+    margin: 1cm; /* Margin minimal */
   }
 }
