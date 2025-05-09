@@ -74,18 +74,18 @@ td:first-child {
 
 th:nth-child(2),
 td:nth-child(2) {
-  width: 50%; /* Kolom Parameter lebih luas */
+  width: 45%; /* Kolom Parameter lebih luas */
 }
 
 th:nth-child(3),
 td:nth-child(3) {
-  width: 15%; /* Kolom Hasil lebih sempit */
+  width: 10%; /* Kolom Hasil lebih sempit */
   text-align: center; /* Rata tengah isi kolom */
 }
 
 th:nth-child(4),
 td:nth-child(4) {
-  width: 30%; /* Kolom Keterangan lebih luas */
+  width: 40%; /* Kolom Keterangan lebih luas */
   word-wrap: break-word; /* Teks panjang enter otomatis */
   white-space: pre-line; /* Enter manual di input */
 }
@@ -165,7 +165,7 @@ td:nth-child(4) {
 
   th:nth-child(2),
   td:nth-child(2) {
-    width: 45%;
+    width: 40%;
   }
 }
 
@@ -179,12 +179,12 @@ td:nth-child(4) {
   .container {
     max-width: 100%;
     padding: 10px;
-    font-size: 10px;
+    font-size: 8px; /* Lebih kecil lagi saat cetak */
   }
 
   .header {
     gap: 10px;
-    font-size: 10px;
+    font-size: 8px;
   }
 
   .input-group {
@@ -196,13 +196,13 @@ td:nth-child(4) {
   }
 
   table {
-    font-size: 9px; /* Lebih kecil lagi saat cetak */
+    font-size: 7px; /* Lebih kecil lagi */
     page-break-inside: avoid; /* Hindari tabel terpecah */
     table-layout: fixed;
   }
 
   th, td {
-    padding: 4px;
+    padding: 3px;
     word-break: break-word;
     white-space: pre-line;
     overflow-wrap: break-word;
@@ -210,7 +210,7 @@ td:nth-child(4) {
 
   .footer {
     margin-top: 30px;
-    font-size: 9px;
+    font-size: 7px;
   }
 
   .print-button {
