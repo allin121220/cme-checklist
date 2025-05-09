@@ -74,18 +74,18 @@ td:first-child {
 
 th:nth-child(2),
 td:nth-child(2) {
-  width: 60%; /* Kolom Parameter */
+  width: 50%; /* Kolom Parameter lebih luas */
 }
 
 th:nth-child(3),
 td:nth-child(3) {
-  width: 17.5%; /* Kolom Hasil */
+  width: 15%; /* Kolom Hasil lebih sempit */
   text-align: center; /* Rata tengah isi kolom */
 }
 
 th:nth-child(4),
 td:nth-child(4) {
-  width: 17.5%; /* Kolom Keterangan */
+  width: 30%; /* Kolom Keterangan lebih luas */
   word-wrap: break-word; /* Teks panjang enter otomatis */
   white-space: pre-line; /* Enter manual di input */
 }
@@ -165,7 +165,7 @@ td:nth-child(4) {
 
   th:nth-child(2),
   td:nth-child(2) {
-    width: 55%;
+    width: 45%;
   }
 }
 
@@ -196,7 +196,7 @@ td:nth-child(4) {
   }
 
   table {
-    font-size: 10px;
+    font-size: 9px; /* Lebih kecil lagi saat cetak */
     page-break-inside: avoid; /* Hindari tabel terpecah */
     table-layout: fixed;
   }
@@ -210,7 +210,7 @@ td:nth-child(4) {
 
   .footer {
     margin-top: 30px;
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .print-button {
@@ -219,6 +219,6 @@ td:nth-child(4) {
 
   @page {
     size: A4;
-    margin: 0.5cm;
+    margin: 0.5cm; /* Margin minimal */
   }
 }
