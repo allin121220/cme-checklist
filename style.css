@@ -53,15 +53,34 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
-  font-size: 12px; /* Ukuran font lebih kecil */
-  table-layout: fixed; /* Agar kolom tetap lurus */
+  font-size: 12px;
+  table-layout: fixed; /* Kolom tetap lurus */
 }
 
 th, td {
   border: 1px solid #000;
   padding: 6px;
   vertical-align: top;
-  word-break: break-word; /* Memecah teks terlalu panjang */
+  word-break: break-word; /* Teks panjang otomatis enter */
+}
+
+/* Lebar kolom proporsional */
+th:first-child,
+td:first-child {
+  width: 5%; /* Kolom No. */
+  text-align: center;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 60%; /* Kolom Parameter */
+}
+
+th:nth-child(3),
+td:nth-child(3),
+th:nth-child(4),
+td:nth-child(4) {
+  width: 17.5%; /* Kolom Hasil & Keterangan */
 }
 
 .result, .note {
@@ -109,6 +128,28 @@ th, td {
   font-size: 16px;
 }
 
+/* Responsif untuk HP */
+@media (max-width: 600px) {
+  .header {
+    grid-template-columns: 1fr;
+  }
+
+  .print-button {
+    width: 90%;
+    margin: 20px 5%;
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 8%;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    width: 55%;
+  }
+}
+
 /* CSS untuk mode cetak */
 @media print {
   body {
@@ -119,7 +160,7 @@ th, td {
   .container {
     max-width: 100%;
     padding: 10px;
-    font-size: 10px; /* Ukuran font lebih kecil saat cetak */
+    font-size: 10px;
   }
 
   .header {
@@ -138,12 +179,12 @@ th, td {
   table {
     font-size: 10px;
     page-break-inside: avoid; /* Hindari tabel terpecah */
-    table-layout: fixed; /* Kolom tetap lurus */
+    table-layout: fixed;
   }
 
   th, td {
     padding: 4px;
-    word-break: break-word; /* Memecah teks terlalu panjang */
+    word-break: break-word;
   }
 
   .footer {
@@ -152,20 +193,11 @@ th, td {
   }
 
   .print-button {
-    display: none; /* Sembunyikan tombol saat cetak */
+    display: none;
   }
 
-  /* Pastikan konten muat dalam 1 halaman */
   @page {
     size: A4;
-    margin: 0.5cm; /* Margin minimal */
-  }
-}
-
-/* Responsif untuk HP */
-@media (max-width: 600px) {
-  .print-button {
-    width: 90%;
-    margin: 20px 5%;
+    margin: 0.5cm;
   }
 }
