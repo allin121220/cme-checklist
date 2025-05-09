@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checklist CME</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>FORM CHECKLIST MAINTENANCE RUTIN CME</h1>
+    
+    <!-- Header -->
+    <div class="header">
+      <input type="text" placeholder="STO: ...">
+      <input type="date">
+      <input type="text" placeholder="Petugas: ...">
+    </div>
+
+    <!-- AC Section -->
+    <h2>AIR CONDITIONER</h2>
+    <table class="checklist">
+      <tr><th>No</th><th>Parameter</th><th>Hasil (OK/NOK)</th><th>Keterangan</th></tr>
+      <tr>
+        <td>1</td>
+        <td>Temperatur ruangan < 23⁰C<br>Kelembaban 45%-55%</td>
+        <td><select><option>OK</option><option>NOK</option></select></td>
+        <td><input type="text"></td>
+      </tr>
+      <!-- Tambahkan baris lainnya sesuai Excel -->
+    </table>
+
+    <!-- Baterai, Diesel, dll. (Struktur sama seperti di atas) -->
+    <h2>BATTERY</h2>
+    <table class="checklist">
+      <tr><th>No</th><th>Parameter</th><th>Hasil (OK/NOK)</th><th>Keterangan</th></tr>
+      <tr>
+        <td>1</td>
+        <td>Ruangan dalam kondisi BIR</td>
+        <td><select><option>OK</option><option>NOK</option></select></td>
+        <td><input type="text"></td>
+      </tr>
+    </table>
+
+    <!-- Tombol Print -->
+    <button onclick="window.print()">Print sebagai PDF</button>
+  </div>
+</body>
+</html>

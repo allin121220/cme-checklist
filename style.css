@@ -1,0 +1,71 @@
+/* Reset dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Responsive Header */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.header input {
+  flex: 1 1 30%;
+  padding: 8px;
+  font-size: 14px;
+}
+
+/* Tabel Checklist */
+.checklist {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.checklist th, .checklist td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.checklist input, .checklist select {
+  width: 100%;
+  padding: 4px;
+  font-size: 14px;
+}
+
+/* Tombol Print */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Media Query untuk HP */
+@media (max-width: 600px) {
+  .header input {
+    flex: 1 1 100%;
+  }
+}
