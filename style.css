@@ -54,12 +54,14 @@ table {
   border-collapse: collapse;
   margin-bottom: 20px;
   font-size: 12px; /* Ukuran font lebih kecil */
+  table-layout: fixed; /* Agar kolom tetap lurus */
 }
 
 th, td {
   border: 1px solid #000;
   padding: 6px;
   vertical-align: top;
+  word-break: break-word; /* Memecah teks terlalu panjang */
 }
 
 .result, .note {
@@ -136,10 +138,12 @@ th, td {
   table {
     font-size: 10px;
     page-break-inside: avoid; /* Hindari tabel terpecah */
+    table-layout: fixed; /* Kolom tetap lurus */
   }
 
   th, td {
     padding: 4px;
+    word-break: break-word; /* Memecah teks terlalu panjang */
   }
 
   .footer {
@@ -154,6 +158,14 @@ th, td {
   /* Pastikan konten muat dalam 1 halaman */
   @page {
     size: A4;
-    margin: 1cm; /* Margin minimal */
+    margin: 0.5cm; /* Margin minimal */
+  }
+}
+
+/* Responsif untuk HP */
+@media (max-width: 600px) {
+  .print-button {
+    width: 90%;
+    margin: 20px 5%;
   }
 }
