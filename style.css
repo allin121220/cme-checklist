@@ -70,24 +70,30 @@ th:first-child,
 td:first-child {
   width: 5%; /* Kolom No. */
   text-align: center;
+  font-size: 16px; /* Perbesar font */
+  font-weight: bold; /* Bold */
 }
 
 th:nth-child(2),
 td:nth-child(2) {
   width: 45%; /* Kolom Parameter lebih luas */
+  font-size: 14px; /* Perbesar font */
+  font-weight: bold; /* Bold */
 }
 
 th:nth-child(3),
 td:nth-child(3) {
   width: 10%; /* Kolom Hasil lebih sempit */
-  text-align: center; /* Rata tengah isi kolom */
+  text-align: center;
+  font-size: 12px;
 }
 
 th:nth-child(4),
 td:nth-child(4) {
   width: 40%; /* Kolom Keterangan lebih luas */
-  word-wrap: break-word; /* Teks panjang enter otomatis */
-  white-space: pre-line; /* Enter manual di input */
+  word-wrap: break-word;
+  white-space: pre-line;
+  font-size: 12px;
 }
 
 .result, .note {
@@ -96,14 +102,14 @@ td:nth-child(4) {
   padding: 4px;
   font-size: 12px;
   box-sizing: border-box;
-  text-align: center; /* Rata tengah input hasil */
+  text-align: center;
 }
 
 .note {
-  text-align: left; /* Rata kiri input keterangan */
-  white-space: pre-line; /* Enter manual di input */
-  resize: none; /* Hindari drag resize textarea */
-  overflow-wrap: break-word; /* Memecah kata terlalu panjang */
+  text-align: left;
+  white-space: pre-line;
+  resize: none;
+  overflow-wrap: break-word;
 }
 
 .footer {
@@ -116,13 +122,13 @@ td:nth-child(4) {
   text-align: center;
   width: 45%;
   margin-bottom: 30px;
-  font-weight: bold; /* Tanda tangan bold */
+  font-weight: bold;
 }
 
 .signature p {
   margin-bottom: 10px;
   font-size: 12px;
-  font-weight: bold; /* Tanda tangan bold */
+  font-weight: bold;
 }
 
 .signature input {
@@ -132,7 +138,7 @@ td:nth-child(4) {
   text-align: center;
   padding: 5px;
   font-size: 12px;
-  font-weight: bold; /* Tanda tangan bold */
+  font-weight: bold;
 }
 
 .print-button {
@@ -161,10 +167,17 @@ td:nth-child(4) {
   th:first-child,
   td:first-child {
     width: 8%;
+    font-size: 14px;
   }
 
   th:nth-child(2),
   td:nth-child(2) {
+    width: 40%;
+    font-size: 12px;
+  }
+
+  th:nth-child(4),
+  td:nth-child(4) {
     width: 40%;
   }
 }
@@ -179,12 +192,12 @@ td:nth-child(4) {
   .container {
     max-width: 100%;
     padding: 10px;
-    font-size: 8px; /* Lebih kecil lagi saat cetak */
+    font-size: 10px;
   }
 
   .header {
     gap: 10px;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .input-group {
@@ -196,13 +209,25 @@ td:nth-child(4) {
   }
 
   table {
-    font-size: 7px; /* Lebih kecil lagi */
-    page-break-inside: avoid; /* Hindari tabel terpecah */
+    font-size: 9px;
+    page-break-inside: avoid;
     table-layout: fixed;
   }
 
+  th:first-child,
+  td:first-child {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
   th, td {
-    padding: 3px;
+    padding: 4px;
     word-break: break-word;
     white-space: pre-line;
     overflow-wrap: break-word;
@@ -210,7 +235,7 @@ td:nth-child(4) {
 
   .footer {
     margin-top: 30px;
-    font-size: 7px;
+    font-size: 10px;
   }
 
   .print-button {
@@ -219,6 +244,6 @@ td:nth-child(4) {
 
   @page {
     size: A4;
-    margin: 0.5cm; /* Margin minimal */
+    margin: 0.5cm;
   }
 }
