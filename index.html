@@ -1,49 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Checklist CME</title>
+  <title>Form Checklist CME</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>FORM CHECKLIST MAINTENANCE RUTIN CME</h1>
-    
+    <h1 class="title">FORM CHECKLIST MAINTENANCE RUTIN CME</h1>
+
     <!-- Header -->
     <div class="header">
-      <input type="text" placeholder="STO: ...">
-      <input type="date">
-      <input type="text" placeholder="Petugas: ...">
+      <div class="input-group">
+        <label>STO</label>
+        <input type="text" placeholder="..............." class="dotted-input">
+      </div>
+      <div class="input-group">
+        <label>Petugas</label>
+        <input type="text" placeholder="..............." class="dotted-input">
+      </div>
+      <div class="input-group">
+        <label>Tanggal</label>
+        <input type="text" placeholder="..............." class="dotted-input">
+      </div>
     </div>
 
-    <!-- AC Section -->
-    <h2>AIR CONDITIONER</h2>
-    <table class="checklist">
-      <tr><th>No</th><th>Parameter</th><th>Hasil (OK/NOK)</th><th>Keterangan</th></tr>
-      <tr>
-        <td>1</td>
-        <td>Temperatur ruangan < 23⁰C<br>Kelembaban 45%-55%</td>
-        <td><select><option>OK</option><option>NOK</option></select></td>
-        <td><input type="text"></td>
-      </tr>
-      <!-- Tambahkan baris lainnya sesuai Excel -->
-    </table>
+    <!-- Sections -->
+    <section class="checklist-section">
+      <h2>AIR CONDITIONER</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Parameter</th>
+            <th>Hasil (OK/NOK)</th>
+            <th>Keterangan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Temperatur ruangan < 23°C Kelembaban 45% s/d 55%</td>
+            <td><input type="text" class="result"></td>
+            <td><input type="text" class="note"></td>
+          </tr>
+          <!-- Tambahkan baris lainnya sesuai data -->
+        </tbody>
+      </table>
+    </section>
 
-    <!-- Baterai, Diesel, dll. (Struktur sama seperti di atas) -->
-    <h2>BATTERY</h2>
-    <table class="checklist">
-      <tr><th>No</th><th>Parameter</th><th>Hasil (OK/NOK)</th><th>Keterangan</th></tr>
-      <tr>
-        <td>1</td>
-        <td>Ruangan dalam kondisi BIR</td>
-        <td><select><option>OK</option><option>NOK</option></select></td>
-        <td><input type="text"></td>
-      </tr>
-    </table>
+    <!-- Repeat sections for BATTERY, DIESEL GENERATOR, dll. -->
 
-    <!-- Tombol Print -->
-    <button onclick="window.print()">Print sebagai PDF</button>
+    <!-- Footer -->
+    <div class="footer">
+      <div class="signature">
+        <p>Petugas Maintenance</p>
+        <input type="text" placeholder=".................." class="dotted-input">
+      </div>
+      <div class="signature">
+        <p>Mengetahui,<br>Asman O&M Kandatel/Security STO</p>
+        <input type="text" placeholder=".................." class="dotted-input">
+      </div>
+    </div>
   </div>
 </body>
 </html>
